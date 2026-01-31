@@ -1,0 +1,18 @@
+import { Router } from "express";
+import {
+  register,
+  login,
+  sendOtp,
+  sendMailOtp,
+  loginWithMail,
+} from "@/controllers/authController";
+
+const router = Router();
+
+router.post("/sendOtp", sendOtp);
+router.post("/sendMailOtp", sendMailOtp);
+router.post("/register", register);
+router.post("/login", login);
+router.post("/loginWithMail", loginWithMail);
+
+export default router;
