@@ -49,7 +49,7 @@ const PORT = Number(process.env.PORT) || 3000;
 // CORS configuration
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://aasaan-backend-glvs.onrender.com"
+  "https://aasaan-admin.vercel.app"
 ];
 
 // Keep full-origin strings for exact matches, and also derive hostnames so
@@ -94,7 +94,7 @@ const isOriginAllowed = (origin?: string): boolean => {
     if (!isProd && isLocal) return true;
 
     // Special-case common domains and their subdomains (allow both http/https if explicitly desired)
-    if (u.hostname === "https://aasaan-backend-glvs.onrender.com") {
+    if (u.hostname === "https://aasaan-admin.vercel.app") {
       return true;
     }
 
